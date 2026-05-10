@@ -1,0 +1,21 @@
+name: Build-Amjad-System
+on: [push]
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Build Electron App
+        run: npm run build
+      - name: Upload EXE
+        uses: actions/upload-artifact@v3
+        with:
+          name: Agence-Amjad-System-EXE
+          path: dist/*.exe
