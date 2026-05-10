@@ -13,7 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build Electron App
-        run: npm run build
+        run: |
+          mkdir -p dist
+          npm run build
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
