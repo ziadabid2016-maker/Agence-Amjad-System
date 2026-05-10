@@ -1,6 +1,6 @@
 name: Build-Amjad-System
 on: [push]
-jobs:
+jobs: 
   release:
     runs-on: windows-latest
     steps:
