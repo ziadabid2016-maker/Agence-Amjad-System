@@ -1,18 +1,17 @@
 {
   "name": "agence-amjad-system",
   "version": "1.0.0",
+  "description": "System for Agence Amjad",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win"
+    "build": "electron-builder --windows"
   },
+  "keywords": [],
+  "author": "Amjad Qartit",
+  "license": "ISC",
   "devDependencies": {
-    "electron": "^28.2.0",
-    "electron-builder": "^24.9.1"
-  },
-  "build": {
-    "appId": "com.amjad.system",
-    "productName": "Agence Amjad GeoSystem",
-    "win": { "target": "nsis" }
+    "electron": "^25.0.0",
+    "electron-builder": "^24.4.0"
   }
 }
